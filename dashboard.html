@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Expense Tracker</title>
+    <link rel="stylesheet" href="./styles/dashboard.css">
+</head>
+
+<body>
+    <header class = "navbar">
+        <h2>Expense Tracker</h2>
+
+        <div class = "user-section">
+                <span id="userName">Welcome!</span>
+                <button id="logoutBtn">Logout</button>
+        </div>
+    </header>
+
+    <main class="dashboard">
+
+        <h1>Dashboard</h1>
+        <p class="subtitle">Manage your money in one place.</p>
+
+        <section class = "summary-cards">
+
+            <div class = "card balance-card">
+                <h3>Total Balance</h3>
+                <h2 id="totalBalance">₹0.00</h2>
+            </div>
+
+            <div class="card income-card">
+                <h3>Total Income</h3>
+                <h2 id="totalIncome">₹0.00</h2>
+            </div>
+
+            <div class="card expense-card">
+                <h3>Total Expenses</h3>
+                <h2 id="totalExpense">₹0.00</h2>
+            </div>
+        </section>
+
+        <section class="transaction-section">
+
+            <h2>Add Transaction</h2>
+
+            <form id="transactionForm">
+                <input type="text" id="transactionTitle" placeholder="Transaction title" required>
+
+                <input type="number" id="amount" placeholder="Amount" min="0.01" step="0.01" required>
+
+                <select id="type" required>
+                    <option value="">Transaction type</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+
+                <input type="date" id="date" required>
+                <button type="submit">Add Transaction</button> 
+            </form>
+
+            <p id="transactionMessage"></p>
+        </section>
+
+        <section class="history-section">
+
+            <h2>Transaction History</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Amount</th>
+                            <th>Type</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="transactionList">
+                        <tr>
+                            <td colspan="5">No transaction yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="./js/dashboard.js"></script>
+</body>
+</html>
