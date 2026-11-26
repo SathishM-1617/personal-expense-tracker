@@ -5,7 +5,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-auth
 import { getFirestore } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDpOiPnTSjoI7PFZRYEoInXhm_hKJzGJGk",
+  apiKey: "AIzaSyBtESaXC0-94jkf66pVjgkZIOfTCLRiJHs",
   authDomain: "expense-tracker-410b8.firebaseapp.com",
   projectId: "expense-tracker-410b8",
   storageBucket: "expense-tracker-410b8.firebasestorage.app",
